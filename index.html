@@ -15,7 +15,6 @@
   <meta name="language" content="Spanish">
   <link rel="icon" href="favicon.png" />
   <title>Flandertron3000</title>
-  <!-- Tailwind CSS via CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
     @font-face {
@@ -362,7 +361,6 @@
     </main>
   </div>
 
-  <!-- Optional JavaScript -->
   <script>
     const flanders = document.querySelectorAll('.overflow-x-scroll img');
     const fileNameDisplay = document.getElementById("file-name");
@@ -500,8 +498,6 @@
         fileNameDisplay.textContent = "Nada seleccionado";
       }
     }
-
-    // Draggable foreground logic
     
     function renderBackground() {
       backgroundImage.src = selectedImage;
@@ -560,7 +556,6 @@
     function renderText() {
       textCtx.clearRect(0, 0, textCanvas.width, textCanvas.height);
 
-      // Set text style
       textCtx.font = "bold 60px Impact";
       textCtx.textAlign = "center";
       textCtx.fillStyle = "white";
@@ -569,8 +564,7 @@
       textCtx.lineWidth = 2.15;
       textCtx.fillStyle = 'white';
 
-      // Draw text
-      textCtx.fillText(day.value.toUpperCase(), 195, 55); // 390/2=195 for center
+      textCtx.fillText(day.value.toUpperCase(), 195, 55); 
       textCtx.strokeText(day.value.toUpperCase(), 195, 55);
 
       textCtx.font = "bold 50px Impact";
@@ -585,7 +579,6 @@
       renderText();
     }
 
-    // Load images and render once they're ready
     backgroundImage.onload = () => {
       renderBackground();
       renderForeground();
@@ -599,25 +592,21 @@
     function download() {
       const link = document.createElement("a");
       link.download = "Flandertron3000-"+day.value.replace(' ', '-')+"-"+subtitle.value.replace(' ', '-')+".png";
-      // Create a new canvas to combine all canvases
+
       const combinedCanvas = document.createElement('canvas');
       const combinedCtx = combinedCanvas.getContext('2d');
 
-      // Set dimensions to match the original canvases
       combinedCanvas.width = 390;
       combinedCanvas.height = 390;
 
-      // Draw each canvas onto the combined canvas
       combinedCtx.drawImage(backgroundCanvas, 0, 0);
       combinedCtx.drawImage(draggableCanvas, 0, 0);
       combinedCtx.drawImage(textCanvas, 0, 0);
 
-      // Convert the combined canvas to a data URL
-      const imageURL = combinedCanvas.toDataURL('image/png');
-
-      // Create a temporary link element
+      const imageURL = combinedCanvas.toDataURL('image/jpeg', 0.2);
+      
       link.href = imageURL;
-      link.click(); // Trigger the download
+      link.click();
     }
   </script>
   
