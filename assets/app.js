@@ -182,7 +182,7 @@ day.addEventListener('change', (event) => {
   function renderText() {
     textCtx.clearRect(0, 0, textCanvas.width, textCanvas.height);
 
-    textCtx.font = "bold 60px Impactfont";
+    textCtx.font = "60px Impacto";
     textCtx.textAlign = "center";
     textCtx.fillStyle = "white";
 
@@ -193,7 +193,7 @@ day.addEventListener('change', (event) => {
     textCtx.fillText(day.value.toUpperCase(), 195, 55); 
     textCtx.strokeText(day.value.toUpperCase(), 195, 55);
 
-    textCtx.font = "bold 50px Impactfont";
+    textCtx.font = "50px Impacto";
 
     textCtx.fillText(subtitle.value.toUpperCase(), 195, 385);
     textCtx.strokeText(subtitle.value.toUpperCase(), 195, 385);
