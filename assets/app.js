@@ -187,7 +187,7 @@ day.addEventListener('change', (event) => {
     textCtx.fillStyle = "white";
 
     textCtx.strokeStyle = 'black';
-    textCtx.lineWidth = 2.15;
+    textCtx.lineWidth = 1;
     textCtx.fillStyle = 'white';
 
     textCtx.fillText(day.value.toUpperCase(), 195, 55); 
