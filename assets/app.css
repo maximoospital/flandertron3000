@@ -7,7 +7,7 @@
 };
 
 @font-face {
-  font-family: 'Impact';  
+  font-family: 'Impactfont';  
   font-style: normal;
   src: url('impact-webfont.woff2') format('woff2'),
        url('impact-webfont.woff') format('woff');
@@ -19,7 +19,7 @@
 }
 
   .impact-font {
-    font-family: 'Impact';
+    font-family: 'Impactfont';
 }
 
 * {
