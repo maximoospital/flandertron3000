@@ -63,12 +63,14 @@
         <div class="bg-white rounded-lg shadow p-6 flex flex-col justify-between">
           <!-- Logo Row -->
           <div class="flex items-center mb-8">
-            <h1 class="simpson-font text-3xl sm:text-4xl md:text-5xl">Flandertron3000</h1>
+            <h1 class="simpson-font text-3xl sm:text-4xl md:text-5xl hover:text-gray-500">Flandertron3000</h1>
           </div>
   
           <!-- Background Row -->
           <div class="mb-6">
-            <label class="block text-sm font-semibold mb-1">Fondo</label>
+            <label class="block text-sm font-semibold mb-1 has-tooltip">Fondo
+              <span class='tooltip rounded shadow-lg p-1 bg-gray-500 text-white -mt-6'>Subi una foto para el fondo, podes hacerle zoom con la barra de la derecha.</span>
+            </label>
             <div class="flex items-center justify-between space-x-3">
               <div class="flex items-center space-x-3">
                 <label
@@ -104,7 +106,9 @@
             
           <!-- Title and Subtitle Fields -->
           <div class="mb-6">
-            <label class="block text-sm font-semibold">Dia</label>
+            <label class="block text-sm font-semibold has-tooltip">Dia
+              <span class='tooltip rounded shadow-lg p-1 bg-gray-500 text-white -mt-6'>Dia de la semana de la imagen, igual automaticamente se pone el actual.</span>
+            </label>
             <select class="mt-1 block w-full px-3 py-2 rounded-md border 
                      focus:outline-none focus:ring-2 focus:ring-[#FFD90F] 
                      focus:border-[#FFD90F]">
@@ -119,7 +123,10 @@
   
           </div>
           <div class="mb-6">
-            <label class="block text-sm font-semibold">...de que?</label>
+            <label class="block text-sm font-semibold has-tooltip">...de que?
+              <span class='tooltip rounded shadow-lg p-1 bg-gray-500 text-white -mt-6'>Subtitulo de la imagen</span>
+            </label>
+            
             <input
               type="text"
               placeholder="Subtitulo"
@@ -132,8 +139,9 @@
   
           <!-- Foreground Row with Button Navigation -->
           <div class="relative mb-4">
-            <label class="block text-sm font-semibold  mb-1">
+            <label class="block text-sm font-semibold  mb-1 has-tooltip">
               Elegi un Flanders
+              <span class='tooltip rounded shadow-lg p-1 bg-gray-500 text-white -mt-6'>Tenes 25 flanders para elegir, o un espacio vacio.</span>
             </label>
   
             <div class="flex items-center">
@@ -153,6 +161,11 @@
                       w-full h-full mx-2"
               >
                 <!-- Sample items; replace or loop over your own data -->
+                <img
+                src='assets/flanders/0.png'
+                class="w-16 h-16 rounded-md border border-gray-200 flex-shrink-0  
+                     hover:border-[#FFD90F] cursor-pointer flan1"
+                />                 
                 <img
                   src='assets/flanders/1.png'
                   class="w-16 h-16 rounded-md border border-gray-200 flex-shrink-0  
@@ -295,7 +308,8 @@
           <!-- Action Buttons -->
           <div class="flex flex-col items-center justify-center mb-2">
               <span class="text-black font-normal text-sm">
-                Un juguete de <a href="https://maximoospital.xyz/" class="font-bold hover:text-gray-500">Maximo Ospital</a>
+                Un juguete de <a href="https://maximoospital.xyz/" class="font-bold hover:text-gray-500">Maximo Ospital
+                </a>
               </span>
 			  <span class="text-black font-normal text-sm mt-1">
                 <a href="assets/flanders/FlandersPNG.zip" class="font-bold hover:text-gray-500">¿Queres los PNG nomas?</a>
@@ -338,7 +352,7 @@
           <div class="flex space-x-4">
             <button
               class="px-4 py-2 rounded-md bg-[#FFD90F] text-black 
-                     hover:bg-yellow-500 font-medium transition-colors mt-8"
+                     hover:bg-yellow-500 font-medium transition-colors mt-8 hover:text-white hover:elevation-2"
                      onclick="download()">
               Descargar
             </button>

@@ -62,7 +62,7 @@ window.onload = () => {
   day.value = dayOfWeek.normalize('NFD').replace(/[\u0300-\u036f]/g, '') + ' de';
   subtitle.value = 'Flanders';
   zoom.value = 1;
-  selectFlanders(flanders[0]);
+  selectFlanders(flanders[1]);
   selectedImage = 'assets/flanders/fondo.jpg';
   renderAll();
 };
